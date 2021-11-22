@@ -5,7 +5,7 @@ Neovim, Iterm2, Oh-My-Zsh, Stow, Tmux, ...
 ## Install 
 
 #### A
-Use install if it is a new machine, and need everything setup.
+Use this install if it is a brand new machine, and need everything setup.
 
 ```
 curl https://cdn.rawgit.com/thenameiswiiwin/dotfiles/main/install.sh | sh
