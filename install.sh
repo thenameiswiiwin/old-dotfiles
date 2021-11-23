@@ -50,7 +50,7 @@ casks=(
 "1password-cli"
 "brave-browser"
 "google-chrome"
-"iterm2"
+"kitty"
 "lulu"
 "virtualbox"
 "virtualbox-extension-pack"
