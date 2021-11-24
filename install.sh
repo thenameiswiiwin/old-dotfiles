@@ -21,6 +21,10 @@ formulae=(
 "neovim"
 "zsh"
 "exa"
+"gh"
+"zsh-syntax-highlighting"
+"romkatv/powerlevel10k/powerlevel10k"
+"docker-compose"
 "htop"
 "speedtest-cli"
 "tree"
@@ -102,6 +106,10 @@ echo "---------------------------------------------------------"
 
 echo "Changing to zsh"
 chsh -s $(which zsh)
+echo "---------------------------------------------------------"
+
+echo "Install powerlevel10k"
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
