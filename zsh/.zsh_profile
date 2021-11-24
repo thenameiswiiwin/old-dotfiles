@@ -53,6 +53,7 @@ alias myhelp='v $HOME/.vim/plugged/vim-myhelp/doc/myhelp.txt'
 # Git
 # ==============================================================================
 alias gc='git commit -m'
+alias gs='git status'
 alias gpsh='git push -u'
 alias gw='git worktree'
 alias ghc="gh repo create"
