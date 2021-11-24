@@ -1,0 +1,117 @@
+# Brew {{{
+# ==============================================================================
+alias bup='brew cleanup && brew update && brew upgrade && brew cleanup && brew doctor'
+alias bo='brew outdated'
+alias bi='brew install'
+alias bu='brew uninstall'
+alias bl='brew list'
+alias bs='brew search'
+
+# }}}
+
+
+# Exa {{{
+# ==============================================================================
+alias l='exa'
+alias ll='l -l -h --git --icons'
+alias la='ll -a'
+
+# }}}
+
+# Tree {{{
+# ==============================================================================
+alias tree='la --tree --level=4 -a -I=.git --git-ignore'
+
+# }}}
+
+# Vim }}}
+# ==============================================================================
+alias v='nvim'
+alias vc='cd $HOME/.config/mvim && v .'
+
+# }}}
+
+# Zsh
+# ==============================================================================
+alias zc='v $HOME/.zshrc'
+alias zs='source $HOME/.zshrc'
+alias zp='v $HOME/.zsh_profile'
+
+# Port }}}
+# ==============================================================================
+alias k='netstat -ano | findstr :'
+alias p='sudo lsof -i'
+
+# }}}
+
+# Help Me }}}
+# ==============================================================================
+alias myhelp='v $HOME/.vim/plugged/vim-myhelp/doc/myhelp.txt'
+
+# }}}
+
+# Git
+# ==============================================================================
+alias gc='git commit -m'
+alias gpsh='git push -u'
+alias gw='git worktree'
+alias ghc="gh repo create"
+alias ghcl="gh repo clone"
+alias ghf="gh repo fork"
+
+# }}}
+
+# Keyboard
+# ==============================================================================
+alias vqmk="v $HOME/qmk_firmware/keyboards/lily58/keymaps/thenameiswiiwin"
+
+
+# Tmux }}}
+# ==============================================================================
+alias f='$HOME/./tmux-session'
+alias w='$HOME/./tmux-window'
+alias tc="vim ~/.tmux.conf"
+alias tcs="tmux source-file ~/.tmux.conf"
+alias tad="ta dev"
+
+# Cheat Sheet }}}
+# ==============================================================================
+alias s="~/./tmux-cht.sh"
+
+# Lazy }}}
+# ==============================================================================
+alias brave='open -a Brave\ Browser'
+alias chome='open -a Google\ Chrome'
+alias spotify='open -a Spotify'
+alias nord='open -a NordVPN'
+alias post='open -a Postman'
+
+# }}}
+
+# Useful }}}
+# ==============================================================================
+# usefull stuff for presentation and seeing dotfiles
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias showall='defaults write com.apple.finder AppleShowAllFiles YES && killall Finder'
+alias hideall='defaults write com.apple.finder AppleShowAllFiles NO && killall Finder'	
+
+# }}}
+
+# Get Rid of .DS_Store
+# ==============================================================================
+alias dsclean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
+
+# }}}
+
+# Stow
+# ==============================================================================
+alias link='cd ~/.dotfiles && stow zsh kitty bin nvim'
+alias unlink='cd ~/.dotfiles && stow -D zsh kitty bin nvim'
+
+# }}}
+
+export VISUAL="vim"
+export EDITOR="vim"
+export GIT_EDITOR="vim"
+
