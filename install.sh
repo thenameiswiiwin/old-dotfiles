@@ -30,7 +30,6 @@ formulae=(
 "wget"
 "n"
 "java"
-"romkatv/powerlevel10k/powerlevel10k"
 "tree-sitter"
 "yarn"
 )
@@ -91,24 +90,16 @@ fi
 echo "---------------------------------------------------------"
 
 echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
-git clone https://github.com/thenameiswiiwin/dotfile.git ~/.dotfiles
+gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
 echo "---------------------------------------------------------"
 
 echo "Symlink dotfiles"
 cd $HOME/.dotfiles
-stow zsh tmux bin nvim
+stow zsh tmux bin nvim kitty
 echo "---------------------------------------------------------"
 
 echo "Changing to zsh"
 chsh -s $(which zsh)
-echo "---------------------------------------------------------"
-
-echo "Install oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "---------------------------------------------------------"
-
-echo "powerlevel10k"
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
