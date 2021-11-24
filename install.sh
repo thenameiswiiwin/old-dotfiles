@@ -112,6 +112,11 @@ echo "Install powerlevel10k"
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 echo "---------------------------------------------------------"
 
+echo "Zsh autocomplete and syntaxhighlight"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+echo "---------------------------------------------------------"
+
 echo "---------------------------------------------------------"
 echo "All done!"
 echo "Restart terminal"
