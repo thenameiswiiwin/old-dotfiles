@@ -41,6 +41,8 @@ do
 done
 
 casks=(
+"font-victor-mono"
+"font-victor-mono-nerd-font"
 "spotify"
 "vlc"
 "spectacle"
