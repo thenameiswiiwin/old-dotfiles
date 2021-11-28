@@ -8,7 +8,7 @@ Neovim, Kitty, Oh-My-Zsh, Stow, Tmux, ...
 Use this install if it is a brand new machine, and need everything setup.
 
 ```
-curl -O https://raw.githubusercontent.com/thenameiswiiwin/dotfiles/main/install.sh | sh
+curl -O https://raw.githubusercontent.com/thenameiswiiwin/dotfiles/main/install.sh | sh && chmod +x install.sh
 ```
 
 #### B
