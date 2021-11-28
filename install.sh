@@ -108,11 +108,6 @@ echo "Changing to zsh"
 chsh -s $(which zsh)
 echo "---------------------------------------------------------"
 
-echo "Symlink dotfiles"
-cd $HOME/.dotfiles
-stow zsh bin kitty
-echo "---------------------------------------------------------"
-
 echo "Installed oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "---------------------------------------------------------"
@@ -125,6 +120,12 @@ echo "---------------------------------------------------------"
 
 echo "Installed powerlevel10k"
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+echo "---------------------------------------------------------"
+
+echo "Symlink dotfiles"
+rm $HOME/.zshrc
+cd $HOME/.dotfiles
+stow zsh bin kitty
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
