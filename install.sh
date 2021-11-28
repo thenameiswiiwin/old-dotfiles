@@ -106,6 +106,7 @@ echo "Nerd fonts"
 brew tap homebrew/cask-fonts
 echo "Victor Mono font"
 brew install --cask font-victor-mono
+brew install --cask font-victor-mono-nerd-font
 echo "Zsh autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 echo "Zsh highlighting"
