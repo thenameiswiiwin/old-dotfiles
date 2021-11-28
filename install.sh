@@ -111,10 +111,6 @@ cd $HOME/.dotfiles
 stow zsh bin kitty
 echo "---------------------------------------------------------"
 
-echo "Installed oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "---------------------------------------------------------"
-
 echo "Installed zsh-syntax-highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 echo "Install zsh-autosuggestions"
@@ -123,6 +119,10 @@ echo "---------------------------------------------------------"
 
 echo "Installed powerlevel10k"
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+echo "---------------------------------------------------------"
+
+echo "Installed oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
