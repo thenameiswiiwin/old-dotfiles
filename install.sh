@@ -114,7 +114,7 @@ stow zsh bin kitty
 echo "---------------------------------------------------------"
 
 echo "Installed oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "---------------------------------------------------------"
 
 echo "Installed zsh-syntax-highlighting"
