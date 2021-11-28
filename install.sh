@@ -105,7 +105,7 @@ echo "---------------------------------------------------------"
 echo "Nerd fonts"
 brew tap homebrew/cask-fonts
 echo "Victor Mono font"
-brew install --cask font-victor-mono-font
+brew install --cask font-victor-mono
 echo "Zsh autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 echo "Zsh highlighting"
@@ -120,7 +120,7 @@ echo "Prepare symlimking"
 cd $HOME && rm .zshrc
 echo "Symlink dotfiles"
 cd $HOME/.dotfiles
-stow zsh tmux bin nvim kitty
+stow zsh bin kitty
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
