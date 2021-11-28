@@ -45,8 +45,6 @@ do
 done
 
 casks=(
-"font-victor-mono"
-"font-victor-mono-nerd-font"
 "spotify"
 "vlc"
 "spectacle"
@@ -95,15 +93,6 @@ else
 fi
 echo "---------------------------------------------------------"
 
-echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
-gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
-echo "---------------------------------------------------------"
-
-echo "Symlink dotfiles"
-cd $HOME/.dotfiles
-stow zsh tmux bin nvim kitty
-echo "---------------------------------------------------------"
-
 echo "Changing to zsh"
 chsh -s $(which zsh)
 echo "---------------------------------------------------------"
@@ -112,9 +101,26 @@ echo "Install powerlevel10k"
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 echo "---------------------------------------------------------"
 
-echo "Zsh autocomplete and syntaxhighlight"
+
+echo "Nerd fonts"
+brew tap homebrew/cask-fonts
+echo "Victor Mono font"
+brew install --cask font-victor-mono-font
+echo "Zsh autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+echo "Zsh highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "---------------------------------------------------------"
+
+echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
+gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
+echo "---------------------------------------------------------"
+
+echo "Prepare symlimking"
+cd $HOME && rm .zshrc
+echo "Symlink dotfiles"
+cd $HOME/.dotfiles
+stow zsh tmux bin nvim kitty
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
