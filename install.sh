@@ -97,6 +97,10 @@ echo "Changing to zsh"
 chsh -s $(which zsh)
 echo "---------------------------------------------------------"
 
+echo "Install oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "---------------------------------------------------------"
+
 echo "Install powerlevel10k"
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 echo "---------------------------------------------------------"
