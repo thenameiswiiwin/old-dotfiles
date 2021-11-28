@@ -22,14 +22,12 @@ formulae=(
 "zsh"
 "exa"
 "gh"
-"zsh-syntax-highlighting"
 "romkatv/powerlevel10k/powerlevel10k"
 "docker-compose"
 "htop"
 "speedtest-cli"
 "tree"
 "z"
-"neovim"
 "gnupg"
 "wget"
 "n"
@@ -101,27 +99,29 @@ echo "Changing to zsh"
 chsh -s $(which zsh)
 echo "---------------------------------------------------------"
 
-echo "Install powerlevel10k"
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-echo "---------------------------------------------------------"
-
-echo "Nerd fonts"
-brew tap homebrew/cask-fonts
-echo "Victor Mono font"
-brew install --cask font-victor-mono
-brew install --cask font-victor-mono-nerd-font
-echo "Zsh autosuggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-echo "Zsh highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-echo "---------------------------------------------------------"
-
-
-echo "Prepare symlimking"
-cd $HOME && rm .zshrc
 echo "Symlink dotfiles"
 cd $HOME/.dotfiles
 stow zsh bin kitty
+echo "---------------------------------------------------------"
+
+echo "Installed oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "---------------------------------------------------------"
+
+echo "Installed powerlevel10k"
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+echo "---------------------------------------------------------"
+
+echo "Tap nerd fonts"
+brew tap homebrew/cask-fonts
+echo "Install Victor Mono font"
+brew install --cask font-victor-mono
+brew install --cask font-victor-mono-nerd-font
+
+echo "Installed zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+echo "Install zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"
