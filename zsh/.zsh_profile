@@ -108,7 +108,7 @@ alias dsclean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 # Stow
 # ==============================================================================
 alias link='cd ~/.dotfiles && stow zsh kitty bin nvim'
-alias unlink='cd ~/.dotfiles && stow -D zsh kitty bin nvim'
+alias ulink='cd ~/.dotfiles && stow -D zsh kitty bin nvim'
 
 # }}}
 
