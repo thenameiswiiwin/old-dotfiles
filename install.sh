@@ -50,6 +50,7 @@ casks=(
 "1password"
 "1password-cli"
 "brave-browser"
+"homebrew/cask-drivers/qmk-toolbox"
 "google-chrome"
 "kitty"
 "lulu"
