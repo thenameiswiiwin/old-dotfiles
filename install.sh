@@ -98,6 +98,8 @@ brew install --cask font-victor-mono
 brew install --cask font-victor-mono-nerd-font
 echo "---------------------------------------------------------"
 
+echo "GH Auth"
+gh auth login
 echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
 gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
 echo "---------------------------------------------------------"
