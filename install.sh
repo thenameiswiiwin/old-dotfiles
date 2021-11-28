@@ -93,18 +93,17 @@ else
 fi
 echo "---------------------------------------------------------"
 
-echo "Changing to zsh"
-chsh -s $(which zsh)
+echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
+gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
 echo "---------------------------------------------------------"
 
-echo "Install oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Changing to zsh"
+chsh -s $(which zsh)
 echo "---------------------------------------------------------"
 
 echo "Install powerlevel10k"
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 echo "---------------------------------------------------------"
-
 
 echo "Nerd fonts"
 brew tap homebrew/cask-fonts
@@ -117,9 +116,6 @@ echo "Zsh highlighting"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 echo "---------------------------------------------------------"
 
-echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
-gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
-echo "---------------------------------------------------------"
 
 echo "Prepare symlimking"
 cd $HOME && rm .zshrc
