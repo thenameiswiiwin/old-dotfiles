@@ -34,6 +34,7 @@ formulae=(
 "java"
 "tree-sitter"
 "yarn"
+"qmk/qmk/qmk"
 )
 
 for i in "${formulae[@]}"
@@ -71,6 +72,7 @@ casks=(
 "suspicious-package"
 "quicklookase"
 "qlvideo"
+"qmk-toolbox"
 )
 
 for s in "${casks[@]}"
