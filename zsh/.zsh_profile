@@ -56,15 +56,16 @@ alias gc='git commit -m'
 alias gs='git status'
 alias gpsh='git push -u'
 alias gw='git worktree'
-alias ghc="gh repo create"
-alias ghcl="gh repo clone"
-alias ghf="gh repo fork"
+alias ghc='gh repo create'
+alias ghcl='gh repo clone'
+alias ghf='gh repo fork'
 
 # }}}
 
 # Keyboard
 # ==============================================================================
-alias vqmk="v $HOME/qmk_firmware/keyboards/lily58/keymaps/thenameiswiiwin"
+alias qv='v $HOME/qmk_firmware/keyboards/lily58/keymaps/thenameiswiiwin'
+alias qc='cd $HOME/qmk_firmware/keyboards/lily58/keymaps && qmk compile' 
 
 
 # Tmux }}}
@@ -107,8 +108,8 @@ alias dsclean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 
 # Stow
 # ==============================================================================
-alias link='cd ~/.dotfiles && stow zsh kitty bin nvim'
-alias ulink='cd ~/.dotfiles && stow -D zsh kitty bin nvim'
+alias link='cd ~/.dotfiles && stow zsh kitty bin nvim keyboard'
+alias ulink='cd ~/.dotfiles && stow -D zsh kitty bin nvim keyboard'
 
 # }}}
 
