@@ -36,4 +36,3 @@ void oled_task_user(void) {
   }
 }
 #endif // OLED_ENABLE
-
