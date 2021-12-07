@@ -87,6 +87,8 @@ alias chome='open -a Google\ Chrome'
 alias spotify='open -a Spotify'
 alias nord='open -a NordVPN'
 alias post='open -a Postman'
+alias f='open -a Finder '
+alias fh='open -a Finder .'
 
 # }}}
 
@@ -110,6 +112,12 @@ alias dsclean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 # ==============================================================================
 alias link='cd ~/.dotfiles && stow zsh kitty bin nvim keyboard'
 alias ulink='cd ~/.dotfiles && stow -D zsh kitty bin nvim keyboard'
+
+# }}}
+
+# Flush your dns cache
+# ==============================================================================
+alias flush='dscacheutil -flushcache'
 
 # }}}
 

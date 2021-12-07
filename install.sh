@@ -19,6 +19,7 @@ formulae=(
 "node"
 "tmux"
 "neovim"
+"fzf"
 "zsh"
 "exa"
 "gh"
@@ -30,6 +31,7 @@ formulae=(
 "z"
 "gnupg"
 "wget"
+"spotify-tui"
 "n"
 "java"
 "tree-sitter"
@@ -53,7 +55,8 @@ casks=(
 "brave-browser"
 "homebrew/cask-drivers/qmk-toolbox"
 "google-chrome"
-"kitty"
+"iterm2"
+"sublime-text"
 "lulu"
 "virtualbox"
 "virtualbox-extension-pack"
@@ -107,6 +110,11 @@ echo "Cloning thenameiswiiwn's dotfiles in to .dotfiles"
 gh repo clone thenameiswiiwin/dotfiles ~/.dotfiles
 echo "---------------------------------------------------------"
 
+echo "Install packer.vim"
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+echo "---------------------------------------------------------"
+
 echo "Changing to zsh"
 chsh -s $(which zsh)
 echo "---------------------------------------------------------"
@@ -128,7 +136,7 @@ echo "---------------------------------------------------------"
 echo "Symlink dotfiles"
 rm $HOME/.zshrc
 cd $HOME/.dotfiles
-stow zsh bin kitty
+stow zsh bin nvim kitty keyboard
 echo "---------------------------------------------------------"
 
 echo "---------------------------------------------------------"

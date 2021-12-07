@@ -16,7 +16,7 @@ Option.g = function(options)
 end
 
 Option.g {
-    encoding = 'utf-8',
+    termguicolors = true,
     startofline = true,
 	expandtab = true,
     errorbells = true,
@@ -28,22 +28,19 @@ Option.g {
     modelines = 0,
     relativenumber = true,
     number = true,
-    numberwidth = 3,
-    termguicolors = true,
+    numberwidth = 4,
     undofile = true,
     spell = true,
     title = true,
     ignorecase = true,
     smartcase = true,
     wildmode = 'longest:full,full',
-    wrap = false,
     list = true,
     listchars = 'tab:▸·,trail:·',
     mouse = 'a',
     scrolloff = 8,
     sidescrolloff = 8,
     joinspaces = false,
-    splitright = true,
     clipboard = 'unnamedplus',
     confirm = true,
     backup = true,
@@ -74,5 +71,15 @@ vim.g.clipboard = {
 }
 
 vim.g.mapleader = " "
+vim.g.one_allow_italics = true
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_terminal_colors = true
+vim.g.tokyonight_italic_comments = true
+vim.g.tokyonight_dark_sidebar = true
+vim.g.tokyonight_lualine_bold = true
+vim.g.override_nvim_web_devicons = true
+vim.g.table_mode_corner = "|"
+
+vim.cmd[[colorscheme tokyonight]]
 
 return Option
